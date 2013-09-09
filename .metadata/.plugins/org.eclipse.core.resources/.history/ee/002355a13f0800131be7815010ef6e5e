@@ -1,0 +1,14 @@
+package com.example;
+
+public class CleoRuntimException extends RuntimException {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6630433014234098453L;
+	
+	public CleoRuntimException(String varMsg){
+		  super(varMsg);
+	}
+
+}

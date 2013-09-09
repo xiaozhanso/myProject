@@ -1,0 +1,21 @@
+package com.example;
+
+public class MyFirstException {
+
+
+
+
+
+public void callDivide(){
+    try {
+        int result = divide(2,1);
+        System.out.println(result);
+    } catch (BadNumberException e) {
+        //do something clever with the exception
+        System.out.println(e.getMessage());
+    }
+    System.out.println("Division attempt done");
+}
+
+
+}

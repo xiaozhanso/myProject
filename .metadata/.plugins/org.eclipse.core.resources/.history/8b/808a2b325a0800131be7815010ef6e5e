@@ -1,0 +1,15 @@
+package com.example;
+
+public class BadNumberException extends Exception {
+	private int myNumber;
+	public BadNumberException(String string) {
+		// TODO Auto-generated constructor stub
+		
+		public BadNumberException (int myNumber){
+		this.myNumber = myNumber;
+		}
+
+	
+	}
+
+}

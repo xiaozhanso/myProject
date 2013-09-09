@@ -1,0 +1,37 @@
+package com.example;
+
+public class MyFirstException {
+
+
+    public int divide(int numberToDivide, int numberToDivideBy)
+    throws BadNumberException{
+        if(numberToDivideBy == 0){
+            throw new BadNumberException("Cannot divide by 0");
+        }
+        return numberToDivide / numberToDivideBy;
+    }
+ 
+
+
+public void callDivide(){
+    try {
+        int result = divide(2,1);
+        System.out.println(result);
+    } catch (BadNumberException e) {
+        //do something clever with the exception
+        System.out.println(e.getMessage());
+    }
+    System.out.println("Division attempt done");
+}
+
+
+private void testMyOwnException() throws CleoException {
+	throw new CleoException("Yolo");
+}
+
+
+public static void main(String args[]){
+	MyFirstException myFirstException = new MyFirstException();
+	myFirstException.callDivide();
+}
+}

@@ -1,0 +1,51 @@
+package com.example;
+
+public class MyFirstException {
+
+
+    public int divide(int numberToDivide, int numberToDivideBy)
+    throws BadNumberException{
+        if(numberToDivideBy == 0){
+            throw new BadNumberException("Cannot divide by 0");
+        }
+        return numberToDivide / numberToDivideBy;
+    }
+ 
+
+
+public void callDivide(){
+    try {
+        int result = divide(2,1);
+        System.out.println(result);
+    } catch (BadNumberException e) {
+        //do something clever with the exception
+        System.out.println(e.getMessage());
+    }
+    System.out.println("Division attempt done");
+}
+
+
+private void testMyOwnException() throws CleoException {
+	throw new CleoException("My own exception that I can hold the control");
+}
+private void testMyOwnRuntimeException() {
+	throw new CleoRuntimeException("My own Runtime exception that I can hold the control");
+}
+
+
+public static void main(String args[]) throws CleoException{
+	try {
+		new MyFirstException().testMyOwnRuntimeException() ;
+	} catch (Exception e) {
+		if(e.getClass().getSimpleName().equals(CleoException.class.getSimpleName())){
+		   //do logics based on
+			System.out.println("!!!!!!!!!!!!!!");
+		}
+		System.out.println("**************************");
+		e.printStackTrace();
+	}
+	//MyFirstException myFirstException = new MyFirstException();
+	//myFirstException.callDivide();
+	
+}
+}

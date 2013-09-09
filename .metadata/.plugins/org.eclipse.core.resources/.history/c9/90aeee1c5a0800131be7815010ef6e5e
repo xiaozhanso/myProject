@@ -1,0 +1,9 @@
+package com.example;
+
+public class BadNumberException extends Exception {
+
+	public BadNumberException(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

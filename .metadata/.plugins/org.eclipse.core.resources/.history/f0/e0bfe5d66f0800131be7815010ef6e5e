@@ -1,0 +1,10 @@
+package com.example;
+
+public class BadNumberException extends Exception {
+	private int myNumber;
+ private String theString;
+	public BadNumberException(String theString) {
+		this.theString = theString;
+	}
+
+}

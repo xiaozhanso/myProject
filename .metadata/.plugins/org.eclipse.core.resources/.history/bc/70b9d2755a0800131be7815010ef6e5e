@@ -1,0 +1,13 @@
+package com.example;
+
+public class BadNumberException extends Exception {
+	private int myNumber;
+	public BadNumberException(int myNumber) {	
+		this.myNumber = myNumber;
+		}
+
+	
+	}
+
+
+
